@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+int karaktersay(const char *s){
+    int i;
+    for(i=0;s[i]!='\0';i++){
+    }
+    return i;
+}
+int ara(const char *cumle,const char *aranan){
+    int i,j;
+    int iki=karaktersay(aranan);
+    int bir=karaktersay(cumle);
+    for(i=0;i<=bir-iki;i++){
+        for(j=0;j<iki;j++){
+            if(cumle[i+j]!=aranan[j])
+                break;
+        }
+        if(j==iki)
+    return 1;
+    }
+    return 0;
+}
+int main()
+{
+    char cumle[100],aranan[20];
+    printf("cumle giriniz:");
+    fgets(cumle,100,stdin);
+    printf("aranacak cumleyi giriniz:");
+    fgets(aranan,20,stdin);
+
+    if(ara(cumle,aranan)==1){
+        printf("var");
+    }
+    else{
+        printf("yok");
+    }
+    return 0;
+}
